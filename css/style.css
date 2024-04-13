@@ -3,20 +3,20 @@
 }
 
 div{
-    height: 6.25%;
-    width: 6.25%;
     border: 2px solid black;
 }
 .gameboard{
     display: flex;
     flex-wrap: wrap;
-    flex-basis: 700px;
-    height: 700px;
+    flex-basis: 600px;
+    width: 600px;
 }
 body{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 
 .highlight{
