@@ -19,7 +19,7 @@ divs.forEach(div => {
 function newGrid(){
     let gridSize = Number(prompt('How many squares per side?'))
     if(gridSize > 100){
-        alert('value too high, try again')
+        alert('value too high, please select a number under 100')
         newGrid()
     }
     else{
