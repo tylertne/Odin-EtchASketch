@@ -18,20 +18,25 @@ divs.forEach(div => {
 
 function newGrid(){
     let gridSize = Number(prompt('How many squares per side?'))
+    if(gridSize > 100){
+        alert('value too high, try again')
+        newGrid()
+    }
+    else{
     while (main.firstChild) {
     main.removeChild(main.lastChild);
     }
     for(let i = 0; i < gridSize ** 2; i++){
         let div = document.createElement('div')
-        //update width and height calculation to be 100% / grid size to fix, then its working
-        div.style.width = '50px'
-        div.style.height = '50px'
+        div.style.width = 100/gridSize + '%'
+        div.style.height = 100/gridSize + '%'
         main.appendChild(div)
     }
     divs = document.querySelectorAll('div')
     divs.forEach(div => {
     div.addEventListener('mouseenter', highlight)
     })
+}
 }
 
 const newGridButton = document.querySelector('button')
