@@ -8,8 +8,8 @@ for(let i = 0; i < 16 ** 2; i++){
 
 let divs = document.querySelectorAll('div')
 
-function highlight(ele){
-    ele.target.classList.add('highlight')
+function highlight(e){
+    e.target.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);
 }
 
 divs.forEach(div => {
